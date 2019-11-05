@@ -1,10 +1,10 @@
 const express = require('express')
-// import car server rts
+const CarRouter = require('./cars_router.js')
 
 const server = express()
 server.use(express.json())
 
-server.use('/api/cars', )
+server.use('/api/cars', CarRouter)
 
 server.get('/', (req, res) => {
     res.send('Entering the car DB')
